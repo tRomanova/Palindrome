@@ -12,7 +12,7 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.15.1/devicon.min.css">
 
     <link rel="stylesheet" href="/css/site.css">
-    <title>App Name: a cording Callenges</title>
+    <title>Palindrome: a cording Callenges</title>
 </head>
 
 </head>
@@ -22,8 +22,8 @@
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark" id="mainNav">
         <div class="container">
             <a class="navbar-brand" href="#index.html">
-                <img src="/img/APPNAMELogo.svg" height="30" alt="">
-                App Name
+                <img src="/img/APPNAMELogo.svg" height="50" alt="">
+                Palindrome
             </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
                 data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
@@ -35,13 +35,13 @@
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
                     <li class="nav-item">
-                        <a class="nav-link "  href="/index.html">Home</a>
+                        <a class="nav-link " href="/index.html">Home</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="app.html">The App</a>
+                        <a class="nav-link active" aria-current="page" href="app.html">Palindrome</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="/code.html">The code</a>
+                        <a class="nav-link" href="/code.html">The Code</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="#">The Repo</a>
@@ -61,9 +61,44 @@
 
 <main class="content container">
 
-    <h1>App UI Goes HERE</h1>
-    <input id="message" placeholder="Enter a message" type="text">
-    <button class="btn btn-primary" type="button" id="rbtSubmit">Display a Message</button>
+    <div class="row h-100 row-cols-1 row-cols-md-2 gy-2">
+        <div class="col border-2 border-end">
+            <h1 class="fw-bold mb-3 title "> Palindrome: A Coding Challenge</h1>
+            <h4 class="lead">
+                A Palindrom is a word, frase, or sequence that the same backward as forward.
+                Write a program the checks if the phrase entered is a palindrome.
+                <!-- <strong>BOLD.</strong> -->
+            </h4>
+            <h2 class="mt-5 border-2 border-bottom">Instructions</h2>
+            <p>
+                Enter a starting value. Press the button
+                and the answer will appear.
+            </p>
+        </div>
+        <div class="col">
+            <form action="#" class="row gy-2 gx-3">
+                <h5 class="usersInstuctions">Enter a phrase or word to check</h5>
+                <div class="col">
+                    <input type="text" id="strValue" class="form-control" placeholder="Starting Value"
+                        aria-label="Starting Value" value="waw" />
+                </div>
+                <div class="col-12 d-flex">
+                    <button class="btn btn-dark btn-lg" id="btnSubmit" type="button">Check It</button>
+                </div>
+            </form>
+            <div class="mt-5 alert alert-ganger fade show invisible" id="alert" role="alert">
+                <div class="" id="results">
+                <!-- <div class="results" id="results"> -->
+
+                </div>
+
+                <!-- <hr />
+                <p class="mb-0" id="results"></p> -->
+
+            </div>
+            <!-- <h2 class="mt-5 border-buttom border-2">Results</h2> -->
+        </div>
+    </div>
 </main>
 <footer class="container-fluid py-3">
     <div class="container">
@@ -72,7 +107,7 @@
                 &copy; Tatyana Romanova
             </div>
             <div class="col-12 text-center">
-                <img src="/img/Open (7).png" height=50>
+                <img src="/img/Open (6).png" height=50>
             </div>
             <div class="col-12 text-center text-lg-end">
                 <a href="#"><i class="bi bi-instagram socialicons"></i></a>
@@ -82,8 +117,8 @@
             </div>
         </div>
     </div>
-</footer>  
-   
+</footer>
+
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
@@ -93,7 +128,7 @@
 
 <script src="/js/site.js"></script>
 <script>
-    document.getElementById('rbtSubmit').addEventListener("click", displayMessage)
+    document.getElementById('btnSubmit').addEventListener("click", getValues)
 </script>
 
 </body>
