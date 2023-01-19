@@ -13,7 +13,7 @@
 
     <link rel="stylesheet" href="/css/site.css">
     <link rel="stylesheet" href="/css/prism.css">
-    <title>App Name: a cording Callenges</title>
+    <title>Palindrome: a cording Callenges</title>
 </head>
 
 </head>
@@ -23,8 +23,8 @@
         <nav class="navbar navbar-expand-lg navbar-dark bg-dark" id="mainNav">
             <div class="container">
                 <a class="navbar-brand" href="#index.html">
-                    <img src="/img/Open (7).png" height="30" alt="">
-                    App Name
+                    <img src="/img/Open (6).png" height="50" alt="">
+                    Palindrome
                 </a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
                     data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
@@ -36,13 +36,13 @@
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
                         <li class="nav-item">
-                            <a class="nav-link active" aria-current="page" href="/index.html">Home</a>
+                            <a class="nav-link" href="/index.html">Home</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="app.html">The App</a>
+                            <a class="nav-link" href="app.html">Palindrome</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="/code.html">The code</a>
+                            <a class="nav-link active" aria-current="page" href="/code.html">The Code</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="#">The Repo</a>
@@ -59,33 +59,80 @@
         </nav>
     </header>
 
-
     <main class="content container">
-
         <div class="content container">
-            <div class="row">
+            <div class="row row-cols-1">
                 <h1 class="border-bottom border-2 border-dark">The code</h1>
-                <div class="col col-12 col-lg">
+                <div class="col-12 col col-md-6 col-lg">
                     <pre class="line-numbers">
                         <code class="language-js">
-                            function displayMessage(params) {
-                                let msg = document.getElementById("message").value;
+                            //entering function
+                            // This function is responsible for receiving and responding to the user's string
+                            function getValues() {
+                                let inputString = document.getElementById('strValue').value;
                             
-                                Swal.fire(
-                                    {
-                                        backdrop: false,
-                                        title: "AppName",
-                                        text: msg
-                                    }
-                                )
+                                let checkedString = checkForPalindrome(inputString);
+                                displayResults(checkedString);
                             }
+                            
+                            //logic function
+                            // This function is responsible determining whether a string is a palindrome
+                            function checkForPalindrome(strToCheck, reversedString) {
+                                let reg = /[^A-Za-z0-9]/g;
+                                let newString = ""
+                                let palindrome = true;
+                            
+                                let regString = strToCheck.toLowerCase().replace(reg, "");
+                            
+                                let halfString = regString.length / 2;
+                                let i = 0;
+                            
+                                for (let j = regString.length - 1; j >= halfString; j--) {
+                            
+                                    if (regString[i] === regString[j]) {
+                                        i += 1;
+                                    } else {
+                                        newString = "isNot"
+                                        palindrome = false;
+                                    }
+                                }
+                                if (palindrome) {
+                                    newString = regString
+                                }
+                            
+                                return newString;
+                            }
+                            
+                            //This function is responsible for displaying a message to the user to show 
+                            //whether their string is a palindrome or not
+                            function displayResults(checkedString) {
+                                let className;
+                            
+                                if (checkedString !== "isNot") {
+                                    className = 'alertPalindrome';
+                                    document.getElementById('results').innerHTML = `<div class=${className} ><h1>Well Done! You entered a Palindrome!</h1><hr>
+                                        <h4>Your phrase reversed is: <b> ${checkedString} </b></h4></div>`;
+                                    document.getElementById('alert').classList.remove('invisible');
+                                } else {
+                                    className = 'alertNotPalindrom';
+                                    document.getElementById('results').innerHTML = `<div class=${className}><h1>Sorry! You entered not a Palindrome!</h1><hr>
+                                    <h4>Try again!</h4></div>`;
+                                    document.getElementById('alert').classList.remove('invisible');
+                                }
+                            }
+
                         </code>
                     </pre>
                 </div>
-                <div class="col col-12 col-lg-4">
-                    <p>The code is structured in one function</p>
-                    <p><code>displayMessage</code></p>
-                    <p>Print out the message</p>
+                <div class="col-12 col-md-6 col-lg-4">
+                    <p>The code is structured in 3 functions</p>
+                    <ul>
+                        <li><code>getValues</code>: This function grabs the user input. 
+                            Call function 2 other functions that checks if the user input is a palindrome or not, and displays the result.</li>
+                        <li><code>checkForPalindrome</code>: This function uses regular expression to ignore non alphanumeric character,
+                        converts string into lower case, and iterates the string in a for loop to check if it is a palindrome or not.</li>
+                        <li><code>displayResults</code>: This function displays an alert in green or red based on whether or not it is a palindrome.</li>
+                    </ul>
                 </div>
             </div>
         </div>
@@ -97,7 +144,7 @@
                     &copy; Tatyana Romanova
                 </div>
                 <div class="col-12 text-center">
-                    <img src="/img/Open (7).png" height=50>
+                    <img src="/img/Open (6).png" height=50>
                 </div>
                 <div class="col-12 text-center text-lg-end">
                     <a href="#"><i class="bi bi-instagram socialicons"></i></a>
