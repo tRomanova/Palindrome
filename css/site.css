@@ -94,16 +94,16 @@ footer {
     width: auto;
     border: 2px solid;
     border-radius: 6px;
-    color: forestgreen;
-    background-color: lightgreen;
+    color: rgb(85, 168, 85);
+    background-color: rgb(199, 243, 199);
 }
 
 .alertNotPalindrom {
     width: 100%;
     border: 2px solid;
     border-radius: 6px;
-    color: brown;
-    background-color: indianred;
+    color: rgb(195, 86, 86);
+    background-color: rgb(245, 190, 190);
 }
 
 .divAlert {
@@ -116,4 +116,7 @@ footer {
     align-items: left;
     justify-content: left;
     margin-left: -15px;
+}
+.title{
+    color:rgb(84, 167, 32);
 }
