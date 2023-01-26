@@ -87,7 +87,7 @@ footer {
 }
 
 .usersInstuctions {
-    color: cornflowerblue;
+    color: rgb(230, 110, 110);
 }
 
 .alertPalindrome {
@@ -119,4 +119,7 @@ footer {
 }
 .title{
     color:rgb(84, 167, 32);
+}
+.btnSabmit {
+    background-color: rgb(230, 110, 110);
 }

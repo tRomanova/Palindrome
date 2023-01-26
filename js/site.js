@@ -50,7 +50,6 @@ function displayResults(result) {
     let messageElement = document.getElementById('message');
     let resultElement = document.getElementById('results');
 
-    console.log("***", result);
     if (result === "Not Palindrome") {
         alert.classList.add('alert-danger');
         messageElement.textContent = "Sorry! You entered NOT a palindrome!"
