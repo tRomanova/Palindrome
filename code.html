@@ -13,7 +13,7 @@
 
     <link rel="stylesheet" href="/css/site.css">
     <link rel="stylesheet" href="/css/prism.css">
-    <title>Palindrome: a cording Callenges</title>
+    <title>Palindrome: a coding challenge</title>
 </head>
 
 </head>
@@ -132,22 +132,29 @@
                 <div class="col-12 col-md-6 col-lg-4">
                     <h4>The code is structured in 3 functions</h4>
                     <ul>
-                        <li>Functin<code>getValues</code>: grabs the user input. 
-                            Then, it calls 2 other functions <code>checkForPalindrome</code> function that checks if the user input is a palindrome or not. 
-                            This function returns a string. Then that string is passed to <code>displayResults</code> function, which displays the result.
+                        <li>Functin<code>getValues</code>: grabs the user input.
+                            Then, it calls 2 other functions <code>checkForPalindrome</code> function that checks if the
+                            user input is a palindrome or not.
+                            This function returns a string. Then that string is passed to <code>displayResults</code>
+                            function, which displays the result.
                         </li>
                         <li>
-                            <code>checkForPalindrome</code>: This function uses regular expression to ignore non alphanumeric character,
-                            converts string into lower case, and iterates the string in a for loop to check if it is a palindrome or not. 
-                            I declared a veriable that will give me half the length of the array string, since Palindrome can be checked for matching characters 
-                             halfway through.  
+                            <code>checkForPalindrome</code>: This function uses regular expression to ignore non
+                            alphanumeric character,
+                            converts string into lower case, and iterates the string in a for loop to check if it is a
+                            palindrome or not.
+                            I declared a veriable that will give me half the length of the array string, since
+                            Palindrome can be checked for matching characters
+                            halfway through.
                         </li>
                         <li>
-                            <code>displayResults</code>: This function displays an alert in green or red based on whether or not it is a palindrome.
-                            Because I want to show 2 different alerts on the page, one when string is palindrome and another when it is not a palindrome, 
+                            <code>displayResults</code>: This function displays an alert in green or red based on
+                            whether or not it is a palindrome.
+                            Because I want to show 2 different alerts on the page, one when string is palindrome and
+                            another when it is not a palindrome,
                             I am removing the alerts class <code>alert-danger</code> and <code>alert-success</code>.
-                            Than I grab the elements where I want to display the result. In the If statement, 
-                            based on the result I am setting an alert with the message.  
+                            Than I grab the elements where I want to display the result. In the If statement,
+                            based on the result I am setting an alert with the message.
                         </li>
                     </ul>
                 </div>
